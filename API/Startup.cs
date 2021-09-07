@@ -44,7 +44,10 @@ namespace API
             });
             
             services.AddCors(options => {
-                options.AddDefaultPolicy(policy => policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+                options.AddDefaultPolicy(policy =>
+                    policy.AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .WithOrigins("https://localhost:4200"));
             });
             
             services.AddIdentityServices(_config);
