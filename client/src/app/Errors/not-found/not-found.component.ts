@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs/operators';
 import { AccountService } from 'src/app/_services/account.service';
 
 @Component({
@@ -7,10 +9,13 @@ import { AccountService } from 'src/app/_services/account.service';
   styleUrls: ['./not-found.component.css']
 })
 export class NotFoundComponent implements OnInit {
-
-  constructor() {}
+  constructor(private accountService: AccountService) {}
 
   ngOnInit(): void {
+  }
+  
+  loggedIn() {
+    return localStorage.getItem('user') != null;
   }
 
 }
