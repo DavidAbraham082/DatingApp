@@ -2,13 +2,10 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ToastrModule } from 'ngx-toastr';
-
-
-
-
 
 @NgModule({
   declarations: [],
@@ -18,6 +15,7 @@ import { ToastrModule } from 'ngx-toastr';
     TabsModule.forRoot(),
     NgxGalleryModule,
     FileUploadModule,
+    BsDatepickerModule.forRoot(),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
     })
@@ -27,7 +25,8 @@ import { ToastrModule } from 'ngx-toastr';
     TabsModule,
     NgxGalleryModule,
     ToastrModule,
-    FileUploadModule
+    FileUploadModule,
+    BsDatepickerModule
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,18 @@
+<div class="form-group">
+  <input
+    type="text"
+    [class.is-invalid]="ngControl.touched && ngControl.invalid"
+    [formControl]="ngControl.control"
+    placeholder="{{label}}"
+    class="form-control"
+    bsDatepicker
+    [bsConfig]="bsConfig"
+    [maxDate]="maxDate"
+  >
+  <div class="text-center">You must be over 18 to use this site</div>
+  <div
+      *ngIf="ngControl.control.errors?.required"
+      class="invalid-feedback">
+    {{label}} is required
+  </div>
+</div>
